@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern html</title>
+</head>
+<body>
+    <div id="html-1">
+        <details>
+            <summary>otong</summary>
+            otong si ganteng dan sombong
+        </details>
+    </div>
+
+    <div id="html-2" style="margin-top: 10px">
+        <button popovertarget="target">pop over</button>
+        <div id="target" popover>otong si ganteng dan sombong</div>
+    </div>
+
+    <div id="html-3" style="margin-top: 10px" inert>
+        <details>
+            <summary>otong inert</summary>
+            otong si ganteng dan sombong
+        </details>
+    </div>
+
+    <div id="html-4" style="margin-top: 10px">
+        <input type="color" name="warna" id="warna">
+        <label for="warna">pilih warna</label>
+    </div>
+
+    <div id="html-5" style="margin-top: 10px">
+        <label for="ice-cream-choice">choose a flavor:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+
+        <datalist id="ice-cream-flavors">
+            <option value="Chocolate"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+            <option value="Mint"></option>
+            <option value="Rocky Road"></option>
+            <option value="Cookie Dough"></option>
+        </datalist>
+    </div>
+
+    <div id="html-6" style="margin-top: 10px">
+        <label for="foto">ambil foto</label>
+        <input type="file" name="foto" id="foto" accept="image/*" capture="user">
+    </div>
+
+    <div id="html-7" style="margin-top: 10px">
+        <p>dialog</p>
+        <dialog id="dialog">
+            <h1>ucup surucup</h1>
+            <form method="dialog">
+                <button type="button" id="btn-done">done</button>
+            </form>
+        </dialog>
+
+        <button type="button" id="btn-click">click</button>
+    </div>
+
+    <script>
+        const btnClick = document.getElementById('btn-click')
+        const dialog = document.getElementById('dialog')
+        const btnDone = document.getElementById('btn-done')
+
+        btnClick.addEventListener('click', () => {
+            dialog.showModal()
+        })
+        
+        btnDone.addEventListener('click', () => {
+            dialog.close()
+        })
+    </script>
+</body>
+</html>
